@@ -1,0 +1,10 @@
+<%= form_for ([@book, @book.comments.build]) do |f| %>
+
+  <div class="field">
+    <%= f.text_field :content%>
+  </div>
+    <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

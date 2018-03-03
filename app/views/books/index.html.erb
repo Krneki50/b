@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Books</h1>
+
+ <% @books.each do |book| %>
+<table>
+  <thead>
+    <tr>
+      <th><%= book.title %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   
+      <tr>
+        <td>
+        <a href="/books/<%= book.id %>">
+        <%= image_tag book.image.url(:thumb) %></a>
+      </td>
+      </tr>
+  </tbody>
+
+<tfoot>
+  <tr>
+   <th><%= book.author %></th>
+ </tr>
+</tfoot>
+
+</table>
+  <% end %>
+<br>
+
+

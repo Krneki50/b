@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class="ad-left">
+<%= image_tag @book.image.url(:medium) %> <br>
+<%= link_to 'Back', books_path %> |
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
+<div>
+<h3>Comments: </h3>
+<%= render @book.comments %> <!-- _comment.html.erb datoteka se rendra tukaj -->
+</div>
+
+<div class="ad-left">
+<h3>Comment</h3>
+<%= render 'comments/form' %>
+</div>
+
+<div class="ad-right">
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+</div>
+
+
+
+
+
